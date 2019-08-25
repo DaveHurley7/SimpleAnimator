@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>images/add.png</file>
+        <file>images/editicon.png</file>
+        <file>images/moveicon.png</file>
+        <file>images/perspectiveicon.png</file>
+        <file>images/previewicon.png</file>
+        <file>images/selecticon.png</file>
+        <file>images/closeicon.png</file>
+        <file>images/pausemedia.png</file>
+        <file>images/playmedia.png</file>
+        <file>images/skipbackframe.png</file>
+        <file>images/skipforwardframe.png</file>
+        <file>images/stopmedia.png</file>
+        <file>images/shapecircle.png</file>
+        <file>images/shapesquare.png</file>
+        <file>images/rotater.png</file>
+        <file>images/colourpalette.png</file>
+    </qresource>
+</RCC>

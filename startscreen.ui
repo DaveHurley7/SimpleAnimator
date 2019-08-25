@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StartDialog</class>
+ <widget class="QDialog" name="StartDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>678</width>
+    <height>432</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Simple Animator</string>
+  </property>
+  <widget class="clickableLabel" name="projCreate">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>140</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Create Project</string>
+   </property>
+  </widget>
+  <widget class="clickableLabel" name="projOpen">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>200</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Open Project</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>clickableLabel</class>
+   <extends>QLabel</extends>
+   <header>clickablelabel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,1522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EditScreen</class>
+ <widget class="QMainWindow" name="EditScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1189</width>
+    <height>775</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Simple Animator</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="ClickableGraphic" name="moveTool">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>20</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>41</width>
+      <height>31</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>41</width>
+      <height>31</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>41</width>
+      <height>31</height>
+     </size>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="backgroundBrush">
+     <brush brushstyle="NoBrush">
+      <color alpha="0">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+    <property name="foregroundBrush">
+     <brush brushstyle="NoBrush">
+      <color alpha="0">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+   </widget>
+   <widget class="ClickableGraphic" name="selectTool">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>20</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="backgroundBrush">
+     <brush brushstyle="NoBrush">
+      <color alpha="0">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+    <property name="foregroundBrush">
+     <brush brushstyle="NoBrush">
+      <color alpha="0">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+   </widget>
+   <widget class="ClickableGraphic" name="editTool">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>20</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="backgroundBrush">
+     <brush brushstyle="NoBrush">
+      <color alpha="0">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+    <property name="foregroundBrush">
+     <brush brushstyle="NoBrush">
+      <color alpha="0">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+   </widget>
+   <widget class="QWidget" name="timeLine" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>510</y>
+      <width>1191</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="addFrame">
+     <property name="geometry">
+      <rect>
+       <x>1150</x>
+       <y>50</y>
+       <width>40</width>
+       <height>70</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+       <horstretch>40</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>40</width>
+       <height>70</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>23</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="frameScroll">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>1141</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(240, 240, 240);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::MultiSelection</enum>
+     </property>
+     <property name="flow">
+      <enum>QListView::LeftToRight</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="ClickableGraphic" name="previewTool">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>460</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="backgroundBrush">
+     <brush brushstyle="NoBrush">
+      <color alpha="0">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+    <property name="foregroundBrush">
+     <brush brushstyle="NoBrush">
+      <color alpha="0">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+   </widget>
+   <widget class="QFrame" name="panelFrame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>301</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>3</number>
+    </property>
+    <widget class="QToolBox" name="sidePanel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>291</width>
+       <height>461</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="shapePage">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>291</width>
+        <height>380</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Shapes</string>
+      </attribute>
+      <widget class="ClickableGraphic" name="shapeSquare">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>10</y>
+         <width>128</width>
+         <height>128</height>
+        </rect>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+      </widget>
+      <widget class="ClickableGraphic" name="shapeCircle">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>180</y>
+         <width>128</width>
+         <height>128</height>
+        </rect>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="squareLabel">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>150</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Square</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="circleLabel">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>320</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Circle</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="colourPage">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>291</width>
+        <height>380</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Colours</string>
+      </attribute>
+      <widget class="ColourPalette" name="colourPalette" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>170</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QSlider" name="lumSld">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>20</y>
+         <width>22</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="value">
+        <number>128</number>
+       </property>
+       <property name="sliderPosition">
+        <number>128</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="invertedControls">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="hueLbl">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>200</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Hue</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="satLbl">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>232</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Sat.</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lumLbl">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>262</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Lum.</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="hueSpb">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>200</y>
+         <width>42</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>359</number>
+       </property>
+       <property name="value">
+        <number>183</number>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="satSpb">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>230</y>
+         <width>42</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="value">
+        <number>247</number>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="lumSpb">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>260</y>
+         <width>42</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="value">
+        <number>128</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="redLbl">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>200</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Red</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="blueLbl">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>262</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Blue</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="greenLbl">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>232</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Green</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="redSpb">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>200</y>
+         <width>42</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="value">
+        <number>8</number>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="greenSpb">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>230</y>
+         <width>42</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="stepType">
+        <enum>QAbstractSpinBox::DefaultStepType</enum>
+       </property>
+       <property name="value">
+        <number>236</number>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="blueSpb">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>260</y>
+         <width>42</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="value">
+        <number>248</number>
+       </property>
+      </widget>
+      <widget class="QWidget" name="colourDisplay" native="true">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>220</y>
+         <width>41</width>
+         <height>41</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QSlider" name="opaSld">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>20</y>
+         <width>22</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="value">
+        <number>255</number>
+       </property>
+       <property name="sliderPosition">
+        <number>255</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lumSldLbl">
+       <property name="geometry">
+        <rect>
+         <x>183</x>
+         <y>0</y>
+         <width>51</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Luminosity</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="opaLbl">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>0</y>
+         <width>51</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Opacity</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcRed">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>300</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Red</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#FF0000;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcBlue">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>300</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Blue</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#0000FF;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcGreen">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>300</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Green</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#00FF00;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcOrange">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>300</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Orange</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#FF8800;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcYellow">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>300</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Yellow</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#FFFF00;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcBrown">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>300</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Brown</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#8B4513;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcPurple">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>300</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Purple</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#FF00FF;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcPink">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>300</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Pink</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#FFC0CB;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcTurquoise">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>300</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Turquoise</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#40E0D0;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcWhite">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>330</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>White</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#FFFFFF;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcCustom1">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>360</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcBlack">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>330</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Black</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#000000;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcDarkGray">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>330</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Dark Gray</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#444444;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcCustom2">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>360</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcCustom3">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>360</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcGray">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>330</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Gray</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#888888;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcLightGray">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>330</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Light Gray</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#CCCCCC;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcDarkRed">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>330</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Dark Red</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#8B0000;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcDarkBlue">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>330</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Dark Blue</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#003366;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcDarkGreen">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>330</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Dark Green</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#006400;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcLightBlue">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>330</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Light Blue</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>2</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:#ADD8E6;border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcCustom4">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>360</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcCustom5">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>360</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcCustom6">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>360</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcCustom7">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>360</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcCustom8">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>360</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dcCustom9">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>360</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid #777777;border-style:inset;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="brushPage">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>291</width>
+        <height>380</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Brush</string>
+      </attribute>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="propertyPanel">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>80</y>
+      <width>251</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <widget class="QLabel" name="XLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>21</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>x:</string>
+     </property>
+    </widget>
+    <widget class="ClickableGraphic" name="closePropertyPanel">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>10</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="backgroundBrush">
+      <brush brushstyle="NoBrush">
+       <color alpha="0">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="foregroundBrush">
+      <brush brushstyle="NoBrush">
+       <color alpha="0">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </property>
+    </widget>
+    <widget class="QLabel" name="coordLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Co-ordinates:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="shapeName">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="XCoord">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>67</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>500</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="YCoord">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>67</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>420</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="YLabel">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>70</y>
+       <width>21</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>y:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="angleLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Angle:</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="angleDisplay">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>359</number>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="canvasFrame">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>80</y>
+      <width>500</width>
+      <height>420</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <widget class="Canvas" name="canvas" native="true">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>60</y>
+       <width>300</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1189</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="rmFrame"/>
+    <addaction name="rmComp"/>
+    <addaction name="projPrefs"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="exportFrameToImg">
+     <property name="title">
+      <string>Export Selected Frame As...</string>
+     </property>
+     <addaction name="makePng"/>
+     <addaction name="makeJpg"/>
+    </widget>
+    <widget class="QMenu" name="menuOpenRecent">
+     <property name="title">
+      <string>Open Recent</string>
+     </property>
+    </widget>
+    <addaction name="itemNew"/>
+    <addaction name="itemSave"/>
+    <addaction name="itemOpen"/>
+    <addaction name="menuOpenRecent"/>
+    <addaction name="separator"/>
+    <addaction name="exportProject"/>
+    <addaction name="exportFrameToImg"/>
+    <addaction name="separator"/>
+    <addaction name="itemClose"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuTools"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="itemNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="itemOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="itemSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="itemSaveAs">
+   <property name="text">
+    <string>Save As...</string>
+   </property>
+  </action>
+  <action name="exportProject">
+   <property name="text">
+    <string>Export Project</string>
+   </property>
+  </action>
+  <action name="itemClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="makePng">
+   <property name="text">
+    <string>PNG</string>
+   </property>
+  </action>
+  <action name="makeJpg">
+   <property name="text">
+    <string>JPG</string>
+   </property>
+  </action>
+  <action name="rmFrame">
+   <property name="text">
+    <string>Delete Frame</string>
+   </property>
+  </action>
+  <action name="rmComp">
+   <property name="text">
+    <string>Delete Component</string>
+   </property>
+  </action>
+  <action name="projPrefs">
+   <property name="text">
+    <string>Project Preferences</string>
+   </property>
+  </action>
+  <action name="actiong">
+   <property name="text">
+    <string>g</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableGraphic</class>
+   <extends>QGraphicsView</extends>
+   <header>clickablegraphic.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Canvas</class>
+   <extends>QWidget</extends>
+   <header>canvas.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ColourPalette</class>
+   <extends>QWidget</extends>
+   <header>colourpalette.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

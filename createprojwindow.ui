@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CreateProjDialog</class>
+ <widget class="QDialog" name="CreateProjDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>507</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Simple Animator - Create Project</string>
+  </property>
+  <widget class="QLineEdit" name="newProjPath">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>90</y>
+     <width>281</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="browsePathForProj">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>90</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="projPath">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>90</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Project Path:</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="newProjWithImage">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>180</y>
+     <width>131</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>From existing image</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">newProjOptions</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="newEmptyProj">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>150</y>
+     <width>131</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>From empty canvas</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">newProjOptions</string>
+   </attribute>
+  </widget>
+  <widget class="QGroupBox" name="projImageInfo">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>170</y>
+     <width>381</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QGraphicsView" name="imagePreview">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>231</width>
+      <height>191</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="chooseImage">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>30</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Choose Image</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="createProj">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>430</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Create Project</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="projName">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>120</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Project Name:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="newProjName">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>120</y>
+     <width>281</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="createProjError">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>60</y>
+     <width>351</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Error_Text</string>
+   </property>
+  </widget>
+  <zorder>newProjPath</zorder>
+  <zorder>browsePathForProj</zorder>
+  <zorder>projPath</zorder>
+  <zorder>newEmptyProj</zorder>
+  <zorder>projImageInfo</zorder>
+  <zorder>createProj</zorder>
+  <zorder>projName</zorder>
+  <zorder>newProjName</zorder>
+  <zorder>createProjError</zorder>
+  <zorder>newProjWithImage</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="newProjOptions"/>
+ </buttongroups>
+</ui>
